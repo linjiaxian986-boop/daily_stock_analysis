@@ -247,27 +247,26 @@ class MarketAnalyzer:
         except Exception as e:
             logger.error(f"[大盘] 获取板块涨跌榜失败: {e}")
     
-        def _get_north_flow(self, overview: MarketOverview):
-          """获取北向资金流入"""
-          try:
-              logger.info("[大盘] 获取北向资金...")
+    # def _get_north_flow(self, overview: MarketOverview):
+    #     """获取北向资金流入"""
+    #     try:
+    #         logger.info("[大盘] 获取北向资金...")
             
-             #获取北向资金数据
-              '''
-              df = ak.stock_hsgt_north_net_flow_in_em(symbol="北上")
+    #         # 获取北向资金数据
+    #         df = ak.stock_hsgt_north_net_flow_in_em(symbol="北上")
             
-              if df is not None and not df.empty:
-                 # 取最新一条数据
-                  latest = df.iloc[-1]
-                  if '当日净流入' in df.columns:
-                      overview.north_flow = float(latest['当日净流入']) / 1e8  # 转为亿元
-                  elif '净流入' in df.columns:
-                      overview.north_flow = float(latest['净流入']) / 1e8
+    #         if df is not None and not df.empty:
+    #             # 取最新一条数据
+    #             latest = df.iloc[-1]
+    #             if '当日净流入' in df.columns:
+    #                 overview.north_flow = float(latest['当日净流入']) / 1e8  # 转为亿元
+    #             elif '净流入' in df.columns:
+    #                 overview.north_flow = float(latest['净流入']) / 1e8
                     
-                  logger.info(f"[大盘] 北向资金净流入: {overview.north_flow:.2f}亿")
-              '''
-            except Exception as e:
-               logger.warning(f"[大盘] 获取北向资金失败: {e}")
+    #             logger.info(f"[大盘] 北向资金净流入: {overview.north_flow:.2f}亿")
+                
+    #     except Exception as e:
+    #         logger.warning(f"[大盘] 获取北向资金失败: {e}")
               
     
     def search_market_news(self) -> List[Dict]:
