@@ -266,8 +266,7 @@ class MarketAnalyzer:
                     
                   logger.info(f"[大盘] 北向资金净流入: {overview.north_flow:.2f}亿")
               '''
-                
-         except Exception as e:
+            except Exception as e:
                logger.warning(f"[大盘] 获取北向资金失败: {e}")
               
     
