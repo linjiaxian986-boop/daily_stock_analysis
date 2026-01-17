@@ -94,8 +94,9 @@ class MarketAnalyzer:
         'sh000688': '科创50',
         'sh000016': '上证50',
         'sh000300': '沪深300',
-        '1B0852': '中证1000',
-        '883957': '同花顺全A'
+        'sz399852': '中证1000',
+        'sz399411': '红利100',
+        'sh000047': '上证全指'
     }
     
     def __init__(self, search_service: Optional[SearchService] = None, analyzer=None):
