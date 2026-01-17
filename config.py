@@ -91,7 +91,7 @@ class Config:
     log_level: str = "INFO"  # 日志级别
     
     # === 系统配置 ===
-    max_workers: int = 1  # 低并发防封禁
+    max_workers: int = 2  # 低并发防封禁
     debug: bool = False
     
     # === 定时任务配置 ===
@@ -101,7 +101,7 @@ class Config:
     
     # === 流控配置（防封禁关键参数）===
     # Akshare 请求间隔范围（秒）
-    akshare_sleep_min: float = 2.0
+    akshare_sleep_min: float = 3.0
     akshare_sleep_max: float = 5.0
     
     # Tushare 每分钟最大请求数（免费配额）
