@@ -265,10 +265,10 @@ class MarketAnalyzer:
                       overview.north_flow = float(latest['净流入']) / 1e8
                     
                   logger.info(f"[大盘] 北向资金净流入: {overview.north_flow:.2f}亿")
-            '''
+              '''
                 
          except Exception as e:
-                logger.warning(f"[大盘] 获取北向资金失败: {e}")
+               logger.warning(f"[大盘] 获取北向资金失败: {e}")
               
     
     def search_market_news(self) -> List[Dict]:
